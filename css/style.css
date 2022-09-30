@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+
+}
+nav{
+    margin:auto 0;
+    width: 100%;
+    min-height: 60px;
+    top: 0px;
+    z-index: 2;
+
+}
+footer{
+    width: 100%;
+    height: 120px;
+    background-color:rgb(37, 37, 37);
+    font-size: 32px;
+    text-align: left;
+    line-height: 100px;
+    color: green;
+}
+footer p{
+    color: whitesmoke;
+    display: inline-block;
+    font-size: 24px;
+}
+.film_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+.alert{
+    margin-top: 40vh;
+}
+.scroll-top{
+    float: right;
+    margin-right: 15px;
+}
+.film_list div{
+    margin-top: 15px ;
+    padding: 5px;
+}
+.film_list>div>img{
+    object-fit: cover;
+}
+.dropdown-menu{
+    height: 350px;
+    width: 250px;
+    overflow: auto;
+}
+.controlList{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+}
+.controlList i{
+    margin-right: 8px;
+
+}
+.btn-close{
+   float: right;
+   background-color: red;
+
+}
+.list-group-item>h3{
+    display: inline-block;
+    width: 90%;
+}
+.modal-dialog{
+    min-height: 450px;
+}
+.modal-opasty{
+    position: relative;
+    background-color:rgba(0, 0, 0, 0.816);
+    color: whitesmoke;
+    width: 100%;
+    min-height: 450px;
+}
+.modal-content{
+    min-height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bookmark-toggler{
+    font-size: 18px;
+    float: right;
+    margin-left: 15px;
+    
+}
+.bookmark_list{
+    overflow:auto;
+    height: 90%;
+}
+.bookmark_list li{
+    width: 100%;
+
+}
+aside{
+    float: right;
+    height: 85vh;
+    width: 400px;
+    background-color: whitesmoke;
+    padding: 5px 5px 25px 5px;
+    position: sticky;
+    top: 5rem;
+    bottom: 15px;
+    border-radius: 4px;
+}
+section{
+    min-height: 80vh;
+    background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhUPEhIVFRUVFQ8PFRUVFRUQFRUPFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NDg0NDisZFRk3Ny0rKysrKy0rKysrNy0rLSsrKysrKysrLSsrLSsrKysrKysrKysrKysrKysrKysrK//AABEIAKYBMAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAADAgEABAf/xAAfEAEBAQADAAIDAQAAAAAAAAAAAQIDERITITFhwVH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APlOIbERiHxBG5hJluYXMFRMrmVSLkETMkzluYXMBGclzhWclkUTnK5hWclmQHMLnGXOSTIB8NmDzCpkR5/DZxn8KmQeb42Xjerw7wDzeGay9FiNQHm8suT9JsAHlGsvT5Rcg81yix6NQWoAbEXJdQdyKLeUXJ7E2IPPrIrh6dCoPPcosPR0Hn3Bbj0bgdgrB8QODYA2YTI8lyC4SREJkFSEzE5hcxRWYXMRkuYIrGTTKcwuQdnC5luYroHeWyNmSZyCZlsyuZb0A7l3Rek6gB1kOsvRsdANn+Jn7LpNgC0iktDoEUeouxPQC1EWFtFoVFRVVOqgPQrS2j0Aqik0PQB0HZtg2ovjejDzYp8oGlLmhi5VDSkzQ5pcgbNNivPg2APk2YHJc0Q2SQOaSAWUmR5hcwF5hIiKlBTU9qgNRa2poqNCpNVFgibEaXoegRYjyq1G6CNWB1pehaBFqNVWkaAdTqLqbUUfQ9E3Q2gjQ9Eo6oHQeQ+gcgKxT4Bg+UCxcFFxQsJgeS4gFxDZFCZEPmlyDJsgbJILNJKBs0mRZpJoC5VB5q5QI5Pp3YKqLW2o1RWWJre2WiIqNK1Ua0AbPtG/wTY9wBo2uwWgTf2PdXqhugYmx3f2y0VGhWlo+v6gLQqTdQoLQOQ+wbQVguaHB5AJleUZXmKElLijxDYBeaXNRmLxAejJJR4hc/SC80ko8ryqFhMowSUF5UiVQKaiRtgOumds6ZIDqlXSdwEXSNaV12mwB2otbvKLkEWJ11CWdB3OwFv7FYe5Z9A89idZLui1BR6tRSaFUEUdJoegFuA2fQdg3BsgwfIEyXMHkuQJkuRZJmgWQuRY+zY+lCZLkc0qaA2S5geMwi8xeRSryBIuQc0qASOZloMro6s7BtRV91GuwHpFhkaAOoPRdUW/sBao6vURQSPS91GhRao6rWkaoJtHpWtB1Qdqj1W2ptQRQ7LaLYMwfFBxnwBoTNHCYULmEzkcv8NlBUpMszFKKlPxizDZghc0kgsQ0BcXEZXkFxUjMxUgO6a2RvQMZ0qN6AdibS2IsAXaN0to9QHn0jRtC2AajULYPUAdg9L1BaFHYPUXpFEHrIqTdHQRU6VYkUdFs2g7qDOM+Acb0ZUJC5HkuYBc0uKHOT4QJlcRkkAmCQeSZiobFJA5LkC5bPy3EXIDYuJipAbGxnapAb05rgTUWrsR5gD0jZLlGgDqC3C8lBoB2I1VWIsBGhaLoWgDqi2XYdAPQ6TVHRU1jakEaDo1DtB3GfAcPRhQuYXA8lygXJJRZpZAJgmYnK4BMkiMFlUJmGzoEXAN6XBQsohI2VHpsoLi4KVc0C46o9uugbah10jWwboHJXa3+x3VBlHc9KtHrQJ1RabvQtaBmqLVbrQtUHaFpt0PWhWaHYrVRagyorbUWgzVDsmqLVBWHow8+K9GKoaEyKUkqBs02QZpc0DZJATS5oD5pM155pedKPRnRZXmztc2I9Uqs15pyN+QHp9O9PNORvyA9M0r28vysvKD2XaLyPLeZF5gevXKi8jya5h65gejfIj5HnvMjXMB9cg98oNcwdcwPReQO9gvKLXID03aNbB8qLyCm1od0K8ibsDXSLoPtl2gW6RdDu03YK1R6rNaHrQPRimxpzlCyrztrgX7LnVc5Bc1V505wLm1TbnKKmle3OEbNt+Rzgd7dducDvkTeVzgR8ydcrnAnXLR3kc4VGuUd5XOAWuUeuSscgm7qLtrgRdpu3OBl0i6a4EXSfTnCuumenOBNqLXOB//2Q==');
+    background-size: cover;
+    background-attachment: fixed ;
+    background-position: bottom right;
+
+}
+
+@media only screen and (max-width: 768px) {
+    aside{
+        width: 100%;
+        height: 85vh;
+        background-color:whitesmoke;
+        position: static !important;
+
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+}
