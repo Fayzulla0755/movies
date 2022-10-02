@@ -134,5 +134,8 @@ section{
         flex-direction: column;
         justify-content: space-around;
     }
+    footer{
+        font-size: 18px;
+    }
 
 }
