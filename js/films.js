@@ -1,4 +1,5 @@
-var films = [
+const localBookmark=JSON.parse(window.localStorage.getItem('bookmark'));
+var films =localBookmark || [
 	{
 		id: '287947',
 		title: 'Shazam!',
