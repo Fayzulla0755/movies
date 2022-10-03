@@ -12,6 +12,8 @@ function updateBookmark(film){
     window.localStorage.setItem('bookmark',JSON.stringify(films));
     viewFilms(films);
 }
+let bookmarkFragment=document.createDocumentFragment();
+let filmFragment=document.createDocumentFragment();
 updateBookmark(films.filter(film=>film.bookmark===true));
 function viewBokmarks(film){
     elBookmarkList.innerHTML=null;
@@ -27,8 +29,9 @@ function viewBokmarks(film){
         newH3.textContent=f.title;
         newList.appendChild(newH3);
         newList.appendChild(newDelBtn);
-        elBookmarkList.appendChild(newList);
-    })
+        bookmarkFragment.appendChild(newList);
+    });
+    elBookmarkList.appendChild(bookmarkFragment);
 }
 function viewFilms (film){
     elFilmList.innerHTML=null;
@@ -77,7 +80,7 @@ function viewFilms (film){
     newCard.appendChild(newImg);
     newCard.appendChild(newTitle);
     newCard.appendChild(newControl);
-    elFilmList.appendChild(newCard)
+    filmFragment.appendChild(newCard)
     })
     if(film.length===0){
         const newAlert=document.createElement('div');
@@ -86,4 +89,5 @@ function viewFilms (film){
         newAlert.textContent='Movie is not available !!';
         elFilmList.appendChild(newAlert);
     }
+    elFilmList.appendChild(filmFragment);
 }
